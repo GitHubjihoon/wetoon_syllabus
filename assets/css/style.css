@@ -141,15 +141,11 @@ footer a{color:#6f63ad;font-weight:600}
 .stage.blurred .page-frame:before{transform:translate(9px,9px);box-shadow:0 8px 18px rgba(40,34,55,.10)}
 .stage.blurred .page-frame:after{transform:translate(18px,18px);box-shadow:0 8px 18px rgba(40,34,55,.08)}
 
-.blur-card{background:rgba(255,255,255,.97);border:1px solid var(--line);border-radius:18px;padding:24px 26px;text-align:center;max-width:88%;box-shadow:0 18px 44px rgba(40,34,55,.30);word-break:keep-all;overflow-wrap:break-word}
-.blur-card .more-icon{font-size:34px;display:block;margin-bottom:10px}
-.blur-card strong{display:block;font-size:18px;letter-spacing:-.02em;margin-bottom:6px;color:var(--brand);word-break:keep-all}
-.blur-card p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.6;word-break:keep-all}
+.blur-card{background:rgba(255,255,255,.97);border:1px solid var(--line);border-radius:18px;padding:18px 24px;text-align:center;max-width:88%;box-shadow:0 18px 44px rgba(40,34,55,.30);word-break:keep-all;overflow-wrap:break-word}
+.blur-card p{margin:0;color:#4f8a63;font-weight:700;font-size:15px;line-height:1.6;word-break:keep-all}
 @media(max-width:560px){
-  .blur-card{max-width:90%;padding:16px 18px}
-  .blur-card .more-icon{font-size:26px;margin-bottom:6px}
-  .blur-card strong{font-size:15.5px}
-  .blur-card p{font-size:12px;line-height:1.5}
+  .blur-card{max-width:90%;padding:14px 18px}
+  .blur-card p{font-size:13.5px;line-height:1.5}
 }
 .navbtn{
   position:absolute;top:50%;transform:translateY(-50%);z-index:10;

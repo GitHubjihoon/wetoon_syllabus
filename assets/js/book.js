@@ -48,14 +48,6 @@
   var TOTAL_PAGES = book.pages || TOTAL;     // 교재 실제 페이지 수
   function realPage(n) { return PMAP[n - 1] || n; } // 미리보기 순서 → 실제 쪽
 
-  // 블라인드 안내: 마지막 미리보기 이후 남은 쪽 수
-  var lastShown = realPage(TOTAL);
-  var remaining = Math.max(0, TOTAL_PAGES - lastShown);
-  var blurCount = document.getElementById("blur-count");
-  if (blurCount && remaining > 0) {
-    blurCount.textContent = remaining + "쪽 더 있어요";
-  }
-
   function src(n) { return "assets/images/" + id + "/page" + n + ".jpg"; }
 
   var current = 1;
