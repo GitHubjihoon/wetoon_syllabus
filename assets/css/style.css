@@ -96,9 +96,11 @@ img{display:block;max-width:100%}
 .feat:before{content:"✓";position:absolute;left:0;top:0;color:#4f8a63;font-weight:900}
 
 /* ===== footer ===== */
-footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:13px}
-footer .logo{justify-content:center;margin-bottom:12px;color:var(--ink)}
-footer a{color:#6f63ad;font-weight:600}
+footer{background:#3a342d;color:#b6ad9f;padding:46px 0 56px;margin-top:28px;text-align:center;font-size:13px}
+footer .logo{justify-content:center;margin-bottom:14px}
+footer p{color:#a59c8e}
+footer a{color:#e3a866;font-weight:600}
+footer a:hover{color:#f0bd82}
 
 /* ===== detail page ===== */
 .detail-hero{padding:46px 0 30px}
