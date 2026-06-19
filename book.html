@@ -53,15 +53,16 @@
         <img id="page" src="" alt="본문 페이지" />
         <div class="blur-overlay" id="blur-overlay">
           <div class="blur-card">
-            <span class="lock">🔒</span>
-            <strong>이어지는 내용이 더 있어요</strong>
-            <p>전체 교재에는 차시별 활동과 더 많은 본문이 담겨 있어요.</p>
+            <span class="more-icon">📖</span>
+            <strong id="blur-count">이어지는 내용이 더 있어요</strong>
+            <p>차시별 활동과 본문 전체는 실제 교재에서 만나보세요.</p>
+            <a class="blur-cta" id="blur-cta" href="#" target="_blank" rel="noopener">교재 살펴보기 →</a>
           </div>
         </div>
       </div>
       <button class="navbtn next" id="next" aria-label="다음 페이지">›</button>
     </div>
-    <div class="counter"><span id="cur">1</span> / <span id="total">5</span></div>
+    <div class="counter"><span id="counter"></span></div>
     <div class="thumbs" id="thumbs"></div>
     <div class="cta">
       <a id="wetoon-link" href="#" target="_blank" rel="noopener">위툰(WeToon) 체험하러 가기 →</a>

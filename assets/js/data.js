@@ -19,6 +19,7 @@ window.BOOKS = [
     subtitle: "AI 리터러시 미니수업",
     color: "#a86b8c",
     color2: "#c79ab2",
+    pages: 28,
     summary:
       "AI와 함께 콘텐츠를 만들며 AI와 인간의 관계를 이해하는 미니수업. AI가 ‘함께 일하는 도구’임을 알고, 사람이 판단하고 선택하는 힘을 기릅니다.",
     objectives: [
@@ -38,6 +39,7 @@ window.BOOKS = [
     subtitle: "사회정서 미니수업",
     color: "#6f63ad",
     color2: "#9b91d0",
+    pages: 20,
     summary:
       "감정 카드로 내 마음을 고르고, 웹툰으로 표현하며, 친구와 서로의 마음을 나누는 감정 수업. 2인 1조 활동으로 공감하는 태도를 기릅니다.",
     objectives: [
@@ -57,6 +59,7 @@ window.BOOKS = [
     subtitle: "안전 교육 미니수업",
     color: "#cc7e34",
     color2: "#e3a866",
+    pages: 20,
     summary:
       "‘듣는 안전 교육’에서 위툰과 함께 ‘만드는 안전 교육’으로. 급식실 화재 상황의 위험 요소를 이해하고 올바른 대피 행동을 직접 표현해 봅니다.",
     objectives: [
@@ -76,6 +79,7 @@ window.BOOKS = [
     subtitle: "미디어 리터러시 미니수업",
     color: "#4f8a63",
     color2: "#7fb791",
+    pages: 20,
     summary:
       "AI로 미디어 콘텐츠를 만들며 미디어를 비판적으로 이해하는 미니수업. 보이는 정보를 한 번 더 생각하고, 스스로 미디어의 제공자가 되어 봅니다.",
     objectives: [
@@ -102,3 +106,6 @@ window.PAGE_COUNT = 6;
 
 /* 흐리게(블러) 처리할 표시 페이지 번호 — 실제 교재에 더 많은 내용이 있음을 암시 */
 window.BLUR_PAGE = 6;
+
+/* 미리보기 순서 → 실제 교재 페이지 번호 매핑 (표지 1쪽, 학습목표 5쪽, 본문 6~9쪽) */
+window.PAGE_MAP = [1, 5, 6, 7, 8, 9];

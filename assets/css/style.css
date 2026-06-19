@@ -126,17 +126,27 @@ footer a{color:#6f63ad;font-weight:600}
 .viewer-head h2{font-size:22px;margin:0;letter-spacing:-.02em}
 .viewer-head .hint{color:var(--muted);font-size:13.5px}
 .stage{position:relative;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:22px;display:flex;align-items:center;justify-content:center;min-height:300px}
-.page-frame{position:relative;display:inline-block;line-height:0}
-.page-frame img{max-height:78vh;width:auto;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.12);cursor:zoom-in;transition:filter .3s ease}
+.page-frame{position:relative;display:inline-block;line-height:0;isolation:isolate}
+.page-frame img{position:relative;z-index:1;max-height:78vh;width:auto;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.12);cursor:zoom-in;transition:filter .3s ease}
 
-/* 블러 처리(마지막 장) */
-.blur-overlay{position:absolute;inset:0;display:none;align-items:center;justify-content:center;border-radius:8px;background:rgba(255,255,255,.18)}
-.stage.blurred .page-frame img{filter:blur(11px) saturate(.9);cursor:default}
+/* 블라인드(더 많은 내용이 있음을 암시) */
+.blur-overlay{position:absolute;inset:0;z-index:2;display:none;align-items:center;justify-content:center;border-radius:8px;
+  background:linear-gradient(180deg,rgba(255,255,255,.04) 0%,rgba(44,42,51,.12) 45%,rgba(44,42,51,.40) 100%)}
+.stage.blurred .page-frame img{filter:blur(12px) saturate(.92) brightness(.98);cursor:default}
 .stage.blurred .blur-overlay{display:flex}
-.blur-card{background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:16px;padding:24px 28px;text-align:center;max-width:80%;box-shadow:0 14px 36px rgba(40,34,55,.22)}
-.blur-card .lock{font-size:30px;display:block;margin-bottom:8px}
-.blur-card strong{display:block;font-size:17px;letter-spacing:-.02em;margin-bottom:6px}
-.blur-card p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.6}
+/* 뒤에 쌓인 페이지 — 더 많은 분량을 시각화 */
+.stage.blurred .page-frame:before,
+.stage.blurred .page-frame:after{content:"";position:absolute;left:0;top:0;width:100%;height:100%;
+  border-radius:8px;background:#fff;border:1px solid var(--line);z-index:0}
+.stage.blurred .page-frame:before{transform:translate(9px,9px);box-shadow:0 8px 18px rgba(40,34,55,.10)}
+.stage.blurred .page-frame:after{transform:translate(18px,18px);box-shadow:0 8px 18px rgba(40,34,55,.08)}
+
+.blur-card{background:rgba(255,255,255,.97);border:1px solid var(--line);border-radius:18px;padding:26px 30px;text-align:center;max-width:84%;box-shadow:0 18px 44px rgba(40,34,55,.30)}
+.blur-card .more-icon{font-size:34px;display:block;margin-bottom:10px}
+.blur-card strong{display:block;font-size:18px;letter-spacing:-.02em;margin-bottom:6px;color:var(--brand)}
+.blur-card p{margin:0 0 16px;color:var(--muted);font-size:13.5px;line-height:1.6}
+.blur-cta{display:inline-flex;align-items:center;gap:6px;background:var(--brand);color:#fff;font-weight:700;font-size:13.5px;padding:10px 20px;border-radius:999px;box-shadow:var(--shadow);transition:opacity .15s ease}
+.blur-cta:hover{opacity:.9}
 .navbtn{
   position:absolute;top:50%;transform:translateY(-50%);z-index:10;
   width:46px;height:46px;border-radius:50%;border:1px solid var(--line);

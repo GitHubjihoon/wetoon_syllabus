@@ -39,12 +39,24 @@
   // ===== 뷰어 =====
   var stage = document.getElementById("stage");
   var pageImg = document.getElementById("page");
-  var curEl = document.getElementById("cur");
+  var counterEl = document.getElementById("counter");
   var prevBtn = document.getElementById("prev");
   var nextBtn = document.getElementById("next");
   var thumbs = document.getElementById("thumbs");
   var BLUR = window.BLUR_PAGE || 0;
-  document.getElementById("total").textContent = TOTAL;
+  var PMAP = window.PAGE_MAP || [];
+  var TOTAL_PAGES = book.pages || TOTAL;     // 교재 실제 페이지 수
+  function realPage(n) { return PMAP[n - 1] || n; } // 미리보기 순서 → 실제 쪽
+
+  // 블라인드 안내: 마지막 미리보기 이후 남은 쪽 수
+  var lastShown = realPage(TOTAL);
+  var remaining = Math.max(0, TOTAL_PAGES - lastShown);
+  var blurCount = document.getElementById("blur-count");
+  if (blurCount && remaining > 0) {
+    blurCount.textContent = "실제 교재에는 " + remaining + "쪽이 더 있어요";
+  }
+  var blurCta = document.getElementById("blur-cta");
+  if (blurCta) blurCta.href = "https://" + S.site;
 
   function src(n) { return "assets/images/" + id + "/page" + n + ".jpg"; }
 
@@ -52,8 +64,8 @@
   function show(n) {
     current = Math.min(Math.max(1, n), TOTAL);
     pageImg.src = src(current);
-    pageImg.alt = book.title + " 미리보기 " + current;
-    curEl.textContent = current;
+    pageImg.alt = book.title + " " + realPage(current) + "쪽";
+    counterEl.textContent = "전체 " + TOTAL_PAGES + "쪽 중 " + realPage(current) + "쪽";
     prevBtn.disabled = current === 1;
     nextBtn.disabled = current === TOTAL;
     stage.classList.toggle("blurred", current === BLUR);
