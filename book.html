@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>교재 소개 | 위툰스쿨 교재 전시관</title>
+<meta name="description" content="위툰스쿨 미니수업 교재 소개 및 본문 미리보기" />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a class="logo" href="index.html">
+      <span class="dot">W</span>
+      <span>위툰스쿨<small>WeToon School</small></span>
+    </a>
+    <nav><a href="index.html#books">전체 교재</a></nav>
+  </div>
+</header>
+
+<section class="detail-hero">
+  <div class="wrap">
+    <a class="back" href="index.html#books">← 전시관으로 돌아가기</a>
+    <div class="detail-grid">
+      <div class="cover-box">
+        <img id="cover" src="" alt="교재 표지" />
+      </div>
+      <div class="detail-info">
+        <span class="badge" id="badge"></span>
+        <div class="series" id="series"></div>
+        <h1 id="title"></h1>
+        <p class="sub" id="subtitle"></p>
+        <p class="lead" id="summary"></p>
+        <div class="obj">
+          <h4>이 수업으로 배울 수 있어요</h4>
+          <ul id="objectives"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="viewer-section">
+  <div class="wrap">
+    <div class="viewer-head">
+      <h2>본문 미리보기</h2>
+      <span class="hint">표지부터 5페이지까지 살펴볼 수 있어요. 이미지를 누르면 크게 볼 수 있어요.</span>
+    </div>
+    <div class="stage">
+      <button class="navbtn prev" id="prev" aria-label="이전 페이지">‹</button>
+      <img id="page" src="" alt="본문 페이지" />
+      <button class="navbtn next" id="next" aria-label="다음 페이지">›</button>
+    </div>
+    <div class="counter"><span id="cur">1</span> / <span id="total">5</span></div>
+    <div class="thumbs" id="thumbs"></div>
+    <div class="cta">
+      <a id="wetoon-link" href="#" target="_blank" rel="noopener">위툰(WeToon) 체험하러 가기 →</a>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <span class="close" id="lb-close">×</span>
+  <img id="lb-img" src="" alt="확대 이미지" />
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="logo"><span class="dot">W</span><span>위툰스쿨</span></div>
+    <p id="foot"></p>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/book.js"></script>
+</body>
+</html>
