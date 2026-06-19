@@ -28,4 +28,4 @@ python3 -m http.server 8000
 GitHub Pages로 배포됩니다. (Settings → Pages → Branch: main / root)
 
 ---
-발행 (주)제이지비피애틱 · [wetoon.ai](https://wetoon.ai)
+발행 (주)제이지비퍼블릭 · [wetoon.ai](https://wetoon.ai)

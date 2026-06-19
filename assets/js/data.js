@@ -2,7 +2,7 @@
 window.SITE = {
   brand: "위툰스쿨",
   brandEn: "WeToon School",
-  author: "(주)제이지비피애틱",
+  author: "(주)제이지비퍼블릭",
   site: "wetoon.ai",
   tagline: "AI 웹툰 제작 도구 위툰(WeToon)과 함께하는 미니수업 교재 시리즈",
   intro:
