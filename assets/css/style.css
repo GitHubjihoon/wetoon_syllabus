@@ -134,7 +134,7 @@ footer a{color:#6f63ad;font-weight:600}
 .blur-card strong{display:block;font-size:17px;letter-spacing:-.02em;margin-bottom:6px}
 .blur-card p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.6}
 .navbtn{
-  position:absolute;top:50%;transform:translateY(-50%);
+  position:absolute;top:50%;transform:translateY(-50%);z-index:10;
   width:46px;height:46px;border-radius:50%;border:1px solid var(--line);
   background:#fff;cursor:pointer;font-size:20px;color:var(--ink);
   box-shadow:var(--shadow);display:grid;place-items:center;transition:transform .15s ease}
@@ -142,6 +142,12 @@ footer a{color:#6f63ad;font-weight:600}
 .navbtn:disabled{opacity:.3;cursor:default}
 .navbtn.prev{left:-12px}
 .navbtn.next{right:-12px}
+@media(max-width:560px){
+  .stage{padding:14px}
+  .navbtn{width:40px;height:40px;font-size:18px}
+  .navbtn.prev{left:6px}
+  .navbtn.next{right:6px}
+}
 .counter{text-align:center;margin-top:14px;font-weight:700;color:var(--muted);font-size:14px}
 .thumbs{display:flex;gap:10px;justify-content:center;margin-top:20px;flex-wrap:wrap}
 .thumbs button{padding:0;border:2px solid transparent;border-radius:10px;overflow:hidden;cursor:pointer;background:none;width:64px;aspect-ratio:210/297;box-shadow:var(--shadow)}
