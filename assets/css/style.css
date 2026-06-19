@@ -67,16 +67,19 @@ img{display:block;max-width:100%}
 
 .card{
   background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
-  overflow:hidden;box-shadow:var(--shadow);
+  box-shadow:var(--shadow);padding:14px;
   transition:transform .25s ease,box-shadow .25s ease;
   display:flex;flex-direction:column;
 }
 .card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg)}
-.card .thumb{position:relative;aspect-ratio:210/297;overflow:hidden;background:#eee}
+/* 표지를 독립된 '책'처럼 띄워 설명과 분절 */
+.card .thumb{position:relative;aspect-ratio:210/297;overflow:hidden;background:#eee;
+  border-radius:12px;border:1px solid rgba(40,34,55,.10);
+  box-shadow:0 10px 22px rgba(40,34,55,.18)}
 .card .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
 .card:hover .thumb img{transform:scale(1.04)}
-.card .badge{position:absolute;top:12px;left:12px;color:#fff;font-weight:800;font-size:13px;padding:5px 11px;border-radius:999px;box-shadow:0 4px 12px rgba(0,0,0,.18)}
-.card .body{padding:18px 18px 20px}
+.card .badge{position:absolute;top:10px;left:10px;color:#fff;font-weight:800;font-size:13px;padding:5px 11px;border-radius:999px;box-shadow:0 4px 12px rgba(0,0,0,.22)}
+.card .body{padding:18px 5px 4px}
 .card .cat{font-size:12px;font-weight:700;letter-spacing:.02em}
 .card .body h3{margin:6px 0 8px;font-size:18px;line-height:1.35;letter-spacing:-.02em}
 .card .body p{margin:0;color:var(--muted);font-size:13.5px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
