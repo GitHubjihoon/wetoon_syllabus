@@ -98,4 +98,7 @@ window.COMMON_FEATURES = [
 ];
 
 /* 각 교재 미리보기 페이지 수 */
-window.PAGE_COUNT = 5;
+window.PAGE_COUNT = 6;
+
+/* 흐리게(블러) 처리할 표시 페이지 번호 — 실제 교재에 더 많은 내용이 있음을 암시 */
+window.BLUR_PAGE = 6;

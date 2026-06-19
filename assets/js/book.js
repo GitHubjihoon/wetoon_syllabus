@@ -37,11 +37,13 @@
     '<a href="https://' + S.site + '" target="_blank" rel="noopener">' + S.site + "</a>";
 
   // ===== 뷰어 =====
+  var stage = document.getElementById("stage");
   var pageImg = document.getElementById("page");
   var curEl = document.getElementById("cur");
   var prevBtn = document.getElementById("prev");
   var nextBtn = document.getElementById("next");
   var thumbs = document.getElementById("thumbs");
+  var BLUR = window.BLUR_PAGE || 0;
   document.getElementById("total").textContent = TOTAL;
 
   function src(n) { return "assets/images/" + id + "/page" + n + ".jpg"; }
@@ -50,10 +52,11 @@
   function show(n) {
     current = Math.min(Math.max(1, n), TOTAL);
     pageImg.src = src(current);
-    pageImg.alt = book.title + " " + current + "페이지";
+    pageImg.alt = book.title + " 미리보기 " + current;
     curEl.textContent = current;
     prevBtn.disabled = current === 1;
     nextBtn.disabled = current === TOTAL;
+    stage.classList.toggle("blurred", current === BLUR);
     Array.prototype.forEach.call(thumbs.children, function (btn, i) {
       btn.classList.toggle("active", i + 1 === current);
     });
@@ -62,7 +65,8 @@
   // 썸네일
   var t = "";
   for (var i = 1; i <= TOTAL; i++) {
-    t += '<button data-n="' + i + '"><img src="' + src(i) + '" alt="' + i + '페이지 미리보기" loading="lazy" /></button>';
+    var lock = i === BLUR ? ' class="locked"' : "";
+    t += '<button data-n="' + i + '"' + lock + '><img src="' + src(i) + '" alt="' + i + '번째 미리보기" loading="lazy" /></button>';
   }
   thumbs.innerHTML = t;
   Array.prototype.forEach.call(thumbs.children, function (btn) {
@@ -80,11 +84,16 @@
   // 라이트박스(확대)
   var lb = document.getElementById("lightbox");
   var lbImg = document.getElementById("lb-img");
-  function openLb() { lbImg.src = src(current); lb.classList.add("open"); }
+  function openLb() {
+    if (current === BLUR) return; // 블러 페이지는 확대 불가
+    lbImg.src = src(current);
+    lb.classList.add("open");
+  }
   function closeLb() { lb.classList.remove("open"); }
   pageImg.addEventListener("click", openLb);
   document.getElementById("lb-close").addEventListener("click", closeLb);
   lb.addEventListener("click", function (e) { if (e.target === lb) closeLb(); });
 
-  show(1);
+  var startPage = parseInt(params.get("p"), 10);
+  show(startPage >= 1 && startPage <= TOTAL ? startPage : 1);
 })();

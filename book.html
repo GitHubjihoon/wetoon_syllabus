@@ -46,11 +46,20 @@
   <div class="wrap">
     <div class="viewer-head">
       <h2>본문 미리보기</h2>
-      <span class="hint">표지부터 5페이지까지 살펴볼 수 있어요. 이미지를 누르면 크게 볼 수 있어요.</span>
+      <span class="hint">표지와 본문 일부를 미리 볼 수 있어요. 마지막 장은 흐리게 표시되며, 실제 교재에는 더 많은 내용이 담겨 있어요.</span>
     </div>
-    <div class="stage">
+    <div class="stage" id="stage">
       <button class="navbtn prev" id="prev" aria-label="이전 페이지">‹</button>
-      <img id="page" src="" alt="본문 페이지" />
+      <div class="page-frame">
+        <img id="page" src="" alt="본문 페이지" />
+        <div class="blur-overlay" id="blur-overlay">
+          <div class="blur-card">
+            <span class="lock">🔒</span>
+            <strong>이어지는 내용이 더 있어요</strong>
+            <p>전체 교재에는 차시별 활동과 더 많은 본문이 담겨 있어요.</p>
+          </div>
+        </div>
+      </div>
       <button class="navbtn next" id="next" aria-label="다음 페이지">›</button>
     </div>
     <div class="counter"><span id="cur">1</span> / <span id="total">5</span></div>

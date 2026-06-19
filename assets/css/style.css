@@ -122,7 +122,17 @@ footer a{color:#6f63ad;font-weight:600}
 .viewer-head h2{font-size:22px;margin:0;letter-spacing:-.02em}
 .viewer-head .hint{color:var(--muted);font-size:13.5px}
 .stage{position:relative;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:22px;display:flex;align-items:center;justify-content:center;min-height:300px}
-.stage img{max-height:78vh;width:auto;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.12);cursor:zoom-in}
+.page-frame{position:relative;display:inline-block;line-height:0}
+.page-frame img{max-height:78vh;width:auto;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.12);cursor:zoom-in;transition:filter .3s ease}
+
+/* 블러 처리(마지막 장) */
+.blur-overlay{position:absolute;inset:0;display:none;align-items:center;justify-content:center;border-radius:8px;background:rgba(255,255,255,.18)}
+.stage.blurred .page-frame img{filter:blur(11px) saturate(.9);cursor:default}
+.stage.blurred .blur-overlay{display:flex}
+.blur-card{background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:16px;padding:24px 28px;text-align:center;max-width:80%;box-shadow:0 14px 36px rgba(40,34,55,.22)}
+.blur-card .lock{font-size:30px;display:block;margin-bottom:8px}
+.blur-card strong{display:block;font-size:17px;letter-spacing:-.02em;margin-bottom:6px}
+.blur-card p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.6}
 .navbtn{
   position:absolute;top:50%;transform:translateY(-50%);
   width:46px;height:46px;border-radius:50%;border:1px solid var(--line);
@@ -137,6 +147,9 @@ footer a{color:#6f63ad;font-weight:600}
 .thumbs button{padding:0;border:2px solid transparent;border-radius:10px;overflow:hidden;cursor:pointer;background:none;width:64px;aspect-ratio:210/297;box-shadow:var(--shadow)}
 .thumbs img{width:100%;height:100%;object-fit:cover}
 .thumbs button.active{border-color:var(--brand)}
+.thumbs button.locked{position:relative}
+.thumbs button.locked img{filter:blur(3px) brightness(.9)}
+.thumbs button.locked:after{content:"🔒";position:absolute;inset:0;display:grid;place-items:center;font-size:18px}
 
 /* lightbox */
 .lightbox{position:fixed;inset:0;background:rgba(20,16,28,.92);z-index:100;display:none;align-items:center;justify-content:center;padding:24px}
