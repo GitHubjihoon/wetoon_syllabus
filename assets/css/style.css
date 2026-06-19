@@ -96,9 +96,9 @@ img{display:block;max-width:100%}
 .feat:before{content:"✓";position:absolute;left:0;top:0;color:#4f8a63;font-weight:900}
 
 /* ===== footer ===== */
-footer{background:#34322e;color:#b0aaa1;padding:46px 0 56px;margin-top:28px;text-align:center;font-size:13px}
+footer{background:#34322e;color:#ffffff;padding:46px 0 56px;margin-top:28px;text-align:center;font-size:13px}
 footer .logo{justify-content:center;margin-bottom:14px}
-footer p{color:#a59c8e}
+footer p{color:#ffffff}
 footer a{color:#e3a866;font-weight:600}
 footer a:hover{color:#f0bd82}
 
