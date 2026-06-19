@@ -144,9 +144,7 @@ footer a{color:#6f63ad;font-weight:600}
 .blur-card{background:rgba(255,255,255,.97);border:1px solid var(--line);border-radius:18px;padding:26px 30px;text-align:center;max-width:84%;box-shadow:0 18px 44px rgba(40,34,55,.30)}
 .blur-card .more-icon{font-size:34px;display:block;margin-bottom:10px}
 .blur-card strong{display:block;font-size:18px;letter-spacing:-.02em;margin-bottom:6px;color:var(--brand)}
-.blur-card p{margin:0 0 16px;color:var(--muted);font-size:13.5px;line-height:1.6}
-.blur-cta{display:inline-flex;align-items:center;gap:6px;background:var(--brand);color:#fff;font-weight:700;font-size:13.5px;padding:10px 20px;border-radius:999px;box-shadow:var(--shadow);transition:opacity .15s ease}
-.blur-cta:hover{opacity:.9}
+.blur-card p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.6}
 .navbtn{
   position:absolute;top:50%;transform:translateY(-50%);z-index:10;
   width:46px;height:46px;border-radius:50%;border:1px solid var(--line);

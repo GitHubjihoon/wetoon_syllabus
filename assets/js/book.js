@@ -55,8 +55,6 @@
   if (blurCount && remaining > 0) {
     blurCount.textContent = "실제 교재에는 " + remaining + "쪽이 더 있어요";
   }
-  var blurCta = document.getElementById("blur-cta");
-  if (blurCta) blurCta.href = "https://" + S.site;
 
   function src(n) { return "assets/images/" + id + "/page" + n + ".jpg"; }
 
