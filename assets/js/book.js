@@ -53,7 +53,7 @@
   var remaining = Math.max(0, TOTAL_PAGES - lastShown);
   var blurCount = document.getElementById("blur-count");
   if (blurCount && remaining > 0) {
-    blurCount.textContent = "실제 교재에는 " + remaining + "쪽이 더 있어요";
+    blurCount.textContent = remaining + "쪽 더 있어요";
   }
 
   function src(n) { return "assets/images/" + id + "/page" + n + ".jpg"; }
