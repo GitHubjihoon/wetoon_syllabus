@@ -5,7 +5,8 @@
   var book = window.BOOKS.filter(function (b) { return b.id === id; })[0];
   if (!book) { location.replace("index.html"); return; }
 
-  var TOTAL = window.PAGE_COUNT;
+  var PMAP = book.preview || [1, 2, 3, 4, 5, 6]; // 미리보기 순서 → 실제 PDF 쪽
+  var TOTAL = PMAP.length;                        // 미리보기 장 수
   var S = window.SITE;
 
   // 테마 색상
@@ -43,8 +44,7 @@
   var prevBtn = document.getElementById("prev");
   var nextBtn = document.getElementById("next");
   var thumbs = document.getElementById("thumbs");
-  var BLUR = window.BLUR_PAGE || 0;
-  var PMAP = window.PAGE_MAP || [];
+  var BLUR = TOTAL;                          // 마지막 미리보기 장을 블러 처리
   var TOTAL_PAGES = book.pages || TOTAL;     // 교재 실제 페이지 수
   function realPage(n) { return PMAP[n - 1] || n; } // 미리보기 순서 → 실제 쪽
 

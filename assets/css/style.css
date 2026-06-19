@@ -60,6 +60,11 @@ img{display:block;max-width:100%}
 .section-head h2{font-size:26px;margin:0 0 8px;letter-spacing:-.02em}
 .section-head p{margin:0;color:var(--muted)}
 
+/* ===== series sections ===== */
+.series{margin-bottom:66px}
+.series:last-child{margin-bottom:0}
+.series-eyebrow{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.16em;color:#cc7e34;background:#fff;border:1px solid var(--line);padding:6px 14px;border-radius:999px;margin-bottom:14px}
+
 /* ===== book grid ===== */
 .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
 @media(max-width:920px){.grid{grid-template-columns:repeat(2,1fr)}}
