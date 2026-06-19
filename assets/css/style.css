@@ -49,7 +49,7 @@ img{display:block;max-width:100%}
     radial-gradient(50% 70% at 50% 100%,rgba(111,99,173,.14),transparent 60%);
 }
 .eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.14em;color:#cc7e34;background:#fff;border:1px solid var(--line);padding:7px 16px;border-radius:999px;margin-bottom:20px}
-.hero h1{font-size:clamp(30px,5vw,50px);line-height:1.2;margin:0 0 16px;letter-spacing:-.03em;font-weight:800}
+.hero h1{font-size:clamp(30px,5vw,50px);line-height:1.2;margin:0 0 16px;letter-spacing:-.03em;font-weight:800;word-break:keep-all}
 .hero p{max-width:680px;margin:0 auto;color:var(--muted);font-size:clamp(15px,2vw,17px)}
 .hero .meta{margin-top:22px;font-size:13px;color:var(--muted)}
 .hero .meta b{color:var(--ink)}
