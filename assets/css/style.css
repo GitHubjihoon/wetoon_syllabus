@@ -33,6 +33,7 @@ img{display:block;max-width:100%}
 }
 .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
 .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.02em}
+.logo .logo-img{height:34px;width:auto;display:block}
 .logo .dot{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,#6f63ad,#cc7e34);display:grid;place-items:center;color:#fff;font-size:15px}
 .logo small{display:block;font-weight:600;font-size:11px;color:var(--muted);letter-spacing:.06em}
 .topbar nav a{color:var(--muted);font-weight:600;font-size:14px;margin-left:18px}
